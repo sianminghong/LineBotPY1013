@@ -13,12 +13,12 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-# ¶ñ¤J§Aªº message api ¸ê°T
+# å¡«å…¥ä½ çš„ message api è³‡è¨Š
 line_bot_api = LineBotApi('zmWBpCj5sgkK2gyoRKV0Cyk7cQaLwZAwkKx9koVGjEDriKM10LEdmd478Uz3Qquf18Dn6DoPKWCWbMlm2d2/OAiWu2ZGNFWm2zoiWJWvTyz73gkCxs6FIEf5ncvc6drEe/8ATJrhuO5v+aPapjojZwdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('129e226166e73165e344323b7836868c')
 
-# ³]©w§A±µ¦¬°T®§ªººô§}¡A¦p https://YOURAPP.herokuapp.com/callback
-@app.route("https://linebotpy1013.herokuapp.com/callback", methods=['POST'])
+# è¨­å®šä½ æ¥æ”¶è¨Šæ¯çš„ç¶²å€ï¼Œå¦‚ https://YOURAPP.herokuapp.com/callback
+@app.route("https://linebotpy1013.herokuapp.com:443/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
